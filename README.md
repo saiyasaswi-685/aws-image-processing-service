@@ -55,13 +55,6 @@ The complete asynchronous workflow, Docker orchestration, S3 integration, and SQ
 
 ---
 
-## Deployment Note
-
-The Flask API service is deployed publicly using Render.
-
-The worker service was tested successfully in local Docker environment because Render background workers require a paid plan in free-tier accounts.
-
----
 
 # 🏗️ Project Architecture
 
