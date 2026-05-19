@@ -1,4 +1,3 @@
-
 # AWS Distributed Image Processing System
 
 A scalable distributed backend system for asynchronous image processing using Flask, AWS S3, AWS SQS, Docker, and worker-based architecture.
@@ -20,6 +19,23 @@ This project allows users to upload images through an API, process them asynchro
 - Docker Compose Support
 - Environment Variable Management
 - Scalable Distributed Architecture
+- Cloud Deployment using Render
+
+---
+
+# 🌐 Live Demo
+
+## Live API
+
+https://image-api-service.onrender.com
+
+---
+
+## Deployment Note
+
+The Flask API service is deployed publicly using Render.
+
+The worker service was tested successfully in local Docker environment because Render background workers require a paid plan in free-tier accounts.
 
 ---
 
@@ -39,23 +55,24 @@ Worker Service
 Image Processing (Resize + Watermark)
   ↓
 AWS S3 (Processed Bucket)
-````
+```
 
 ---
 
 # 🛠️ Tech Stack
 
-| Technology     | Purpose                    |
-| -------------- | -------------------------- |
-| Python         | Backend Development        |
-| Flask          | REST API                   |
-| AWS S3         | Image Storage              |
-| AWS SQS        | Queue Communication        |
-| Pillow         | Image Processing           |
-| Docker         | Containerization           |
+| Technology | Purpose |
+|---|---|
+| Python | Backend Development |
+| Flask | REST API |
+| AWS S3 | Image Storage |
+| AWS SQS | Queue Communication |
+| Pillow | Image Processing |
+| Docker | Containerization |
 | Docker Compose | Multi-Container Management |
-| Boto3          | AWS SDK for Python         |
-| Git & GitHub   | Version Control            |
+| Boto3 | AWS SDK for Python |
+| Render | Cloud Deployment |
+| Git & GitHub | Version Control |
 
 ---
 
@@ -93,22 +110,22 @@ aws-image-processing-service/
 
 Before running the project, install:
 
-* Python 3.12+
-* Docker Desktop
-* Git
-* AWS Account
-* AWS S3 Buckets
-* AWS SQS Queue
+- Python 3.12+
+- Docker Desktop
+- Git
+- AWS Account
+- AWS S3 Buckets
+- AWS SQS Queue
 
 ---
 
 # ☁️ AWS Resources Used
 
-| Service                 | Purpose                                    |
-| ----------------------- | ------------------------------------------ |
-| AWS S3 Raw Bucket       | Store original uploaded images             |
-| AWS S3 Processed Bucket | Store processed images                     |
-| AWS SQS Queue           | Queue communication between API and worker |
+| Service | Purpose |
+|---|---|
+| AWS S3 Raw Bucket | Store original uploaded images |
+| AWS S3 Processed Bucket | Store processed images |
+| AWS SQS Queue | Queue communication between API and worker |
 
 ---
 
@@ -197,8 +214,8 @@ POST /images/upload
 
 form-data:
 
-| Key   | Type |
-| ----- | ---- |
+| Key | Type |
+|---|---|
 | image | File |
 
 ---
@@ -254,28 +271,29 @@ GET /images/<image_id>
 
 Tested using:
 
-* Postman
-* Browser
-* Docker Compose
+- Postman
+- Browser
+- Docker Compose
 
 ---
 
 ## Test Cases
 
-| Test Case                  | Status |
-| -------------------------- | ------ |
-| API Running                | ✅      |
-| Image Upload               | ✅      |
-| Invalid File Validation    | ✅      |
-| Empty File Validation      | ✅      |
-| S3 Upload                  | ✅      |
-| SQS Message Send           | ✅      |
-| Worker Queue Polling       | ✅      |
-| Image Download from S3     | ✅      |
-| Image Resize               | ✅      |
-| Watermark Processing       | ✅      |
-| Processed Image Upload     | ✅      |
-| Docker Compose Integration | ✅      |
+| Test Case | Status |
+|---|---|
+| API Running | ✅ |
+| Image Upload | ✅ |
+| Invalid File Validation | ✅ |
+| Empty File Validation | ✅ |
+| S3 Upload | ✅ |
+| SQS Message Send | ✅ |
+| Worker Queue Polling | ✅ |
+| Image Download from S3 | ✅ |
+| Image Resize | ✅ |
+| Watermark Processing | ✅ |
+| Processed Image Upload | ✅ |
+| Docker Compose Integration | ✅ |
+| Render API Deployment | ✅ |
 
 ---
 
@@ -301,21 +319,21 @@ Used for multi-container orchestration.
 
 # 🔒 Security Improvements
 
-* Environment variables using `.env`
-* Secret key protection using `.gitignore`
-* Removed hardcoded AWS credentials
+- Environment variables using `.env`
+- Secret key protection using `.gitignore`
+- Removed hardcoded AWS credentials
 
 ---
 
 # 📈 Future Improvements
 
-* JWT Authentication
-* Redis Caching
-* Kubernetes Deployment
-* CI/CD Pipeline
-* Auto Scaling Workers
-* Image Compression
-* Multiple Image Formats Support
+- JWT Authentication
+- Redis Caching
+- Kubernetes Deployment
+- CI/CD Pipeline
+- Auto Scaling Workers
+- Image Compression
+- Multiple Image Formats Support
 
 ---
 
@@ -328,6 +346,3 @@ Bandaru Sai Yasaswi
 # ⭐ Conclusion
 
 This project demonstrates real-world distributed backend architecture using asynchronous processing, cloud services, Docker-based deployment, and scalable worker communication patterns.
-
-```
-
