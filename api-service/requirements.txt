@@ -114,7 +114,7 @@ python-jose==3.5.0
 python-multipart==0.0.21
 pyttsx3==2.91
 pytz==2025.2
-pywin32==311
+
 PyYAML==6.0.2
 pyzbar==0.1.9
 qrcode==8.2
