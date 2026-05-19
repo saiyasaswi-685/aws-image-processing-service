@@ -1,4 +1,4 @@
-````md
+
 # AWS Distributed Image Processing System
 
 A scalable distributed backend system for asynchronous image processing using Flask, AWS S3, AWS SQS, Docker, and worker-based architecture.
@@ -330,4 +330,4 @@ Bandaru Sai Yasaswi
 This project demonstrates real-world distributed backend architecture using asynchronous processing, cloud services, Docker-based deployment, and scalable worker communication patterns.
 
 ```
-```
+
