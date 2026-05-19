@@ -29,6 +29,30 @@ This project allows users to upload images through an API, process them asynchro
 
 https://image-api-service.onrender.com
 
+### Test API
+
+```http
+GET https://image-api-service.onrender.com/
+```
+
+### Expected Response
+
+```json
+{
+  "message": "API Service Running"
+}
+```
+
+---
+
+## Deployment Note
+
+The Flask API service is deployed publicly using Render.
+
+The worker service was tested successfully in a local Docker environment because Render background workers require a paid plan for continuous worker execution.
+
+The complete asynchronous workflow, Docker orchestration, S3 integration, and SQS communication were fully tested locally.
+
 ---
 
 ## Deployment Note
