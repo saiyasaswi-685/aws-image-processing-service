@@ -78,14 +78,14 @@ while True:
             image = image.convert("RGB")
 
             # Resize image
-            image = image.resize((500, 500))
+            image = image.resize((150, 150))
 
             # Add watermark
             draw = ImageDraw.Draw(image)
 
             draw.text(
                 (20, 20),
-                "Processed by Sai",
+                ""PropelHQ"",
                 fill="red"
             )
 
