@@ -85,7 +85,7 @@ while True:
 
             draw.text(
                 (20, 20),
-                ""PropelHQ"",
+                "PropelHQ",
                 fill="red"
             )
 
